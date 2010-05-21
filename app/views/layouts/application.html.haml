@@ -7,6 +7,8 @@
   %body
     #Container
       #Header
+        .float_right#logout_link
+          = link_to((t :layout_menu_logout), logout_path)
         %h1
           =t :layout_main_title
       - if current_user
@@ -24,7 +26,7 @@
               %li= link_to((t :layout_menu_logs), audits_path)
               %li= link_to((t :layout_menu_users), users_path)
               %li= link_to((t :layout_menu_reports), reports_path)
-            %li= link_to((t :layout_menu_logout), logout_path)
+
 
       #Body
         = show_flash
@@ -35,6 +37,10 @@
         \- &copy; Clear Planet Information Solutions (Pty) Ltd
         %br
         Released under the MIT License.
+        %br
+        %br
+        Improved by
+        = link_to "Infinum", "http://www.infinum.hr", :target => '_blank'
         %br
         %br
         = link_to "Report Bugs", "http://kennethkalmer.lighthouseapp.com/projects/11831-powerdns-on-rails", :target => '_blank'

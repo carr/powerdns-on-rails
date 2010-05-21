@@ -4,15 +4,6 @@
 %table
   = render :partial => '/domains/domain', :collection => @latest_domains
 
-&nbsp;
-%h1
-  = t :generic_search
-
-- form_tag( { :controller => :search, :action => :results }, { :method => :get } ) do
-  = text_field_tag :q
-  = submit_tag t :generic_search
-
-&nbsp;
 %h1.underline 
   = t :label_new_domain
 
