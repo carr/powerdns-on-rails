@@ -107,7 +107,7 @@ en:
 ### Views
 
 # Layout
-  layout_main_title: "PowerDNS on Rails"
+  layout_main_title: "Infinum DNS Admin"
 
   layout_menu_home: "Home"
   layout_menu_domains: "Domains"
