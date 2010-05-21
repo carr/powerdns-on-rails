@@ -20,8 +20,7 @@ namespace :deploy do
   end
   
   task :symlink do
-    run "rm #{current_path}/config/database.yml"
-    run "ln -s #{shared_path}/database.yml #{current_path}/config/database.yml"
+    run "ln -sf #{shared_path}/database.yml #{current_path}/config/database.yml"
   end
 end
 
