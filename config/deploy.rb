@@ -19,10 +19,10 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
   
-  task :symlink do
+  task :symlink_additional do
     run "ln -sf #{shared_path}/database.yml #{current_path}/config/database.yml"
   end
 end
 
 after "deploy", "deploy:cleanup"
-after "deploy", "deploy:symlink"
+after "deploy", "deploy:symlink_additional"
