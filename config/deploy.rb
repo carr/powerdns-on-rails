@@ -2,7 +2,7 @@ set :user, "www-data"
 
 set :repository,  "git://github.com/carr/powerdns-on-rails.git"
 set :branch, "master"
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 
 set :scm, 'git'
 
