@@ -19,12 +19,5 @@ test: &TEST
   username: root
   password:
 
-production:
-  adapter: mysql
-  database: powerdns_production
-  host: localhost
-  username: root
-  password: dont-use-root-here
-
 cucumber:
   <<: *TEST

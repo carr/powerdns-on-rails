@@ -18,7 +18,12 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_path}/tmp/restart.txt"
   end
+  
+  task :symlink do
+    run "rm #{current_path}/config/database.yml"
+    run "ln -s #{shared_path}/database.yml #{current_path}/config/database.yml"
+  end
 end
 
 after "deploy", "deploy:cleanup"
-
+after "deploy", "deploy:symlink"
