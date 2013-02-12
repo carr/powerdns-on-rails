@@ -1,5 +1,6 @@
-gem "rails", '2.3.16'
+gem "rails", '2.3.17'
 gem 'haml', '2.2.10'
+gem 'json', '1.7.7'
 gem 'rdoc'
 gem 'capistrano', '2.5.18'
 gem 'mysql'
